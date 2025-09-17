@@ -350,7 +350,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CaI-jg-IPv"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qUH-aq-ERB" firstAttribute="top" secondItem="POk-yY-fGn" secondAttribute="top" id="4KD-G5-E3g"/>
                             <constraint firstItem="M6z-Pz-rak" firstAttribute="leading" secondItem="CaI-jg-IPv" secondAttribute="leading" id="5wY-aE-58n"/>
