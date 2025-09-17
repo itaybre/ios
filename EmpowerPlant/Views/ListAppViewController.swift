@@ -22,7 +22,6 @@ class ListAppViewController: UIViewController {
     //private let diskWriteException = DiskWriteException()
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Actions"
         activityIndicator.isHidden = true
     }
     

@@ -48,9 +48,9 @@ class EmpowerPlantViewController: UIViewController {
          */
         
         getAllProductsFromServer()
-        getAllProductsFromDb()
-        readCurrentDirectory()
-        performLongFileOperation()
+//        getAllProductsFromDb()
+//        readCurrentDirectory()
+//        performLongFileOperation()
         processProducts()
         checkRelease()
         

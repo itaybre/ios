@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLm-2U-p5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLm-2U-p5i">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -62,90 +62,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-Pe-VKe">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-Pe-VKe">
+                                <rect key="frame" x="0.0" y="192" width="414" height="636"/>
                                 <subviews>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-Es-1yE">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="0.0"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="UUz-Fx-s8z"/>
+                                        </constraints>
                                     </progressView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-Yo-I2U">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="379.5"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-7r-Ymt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="99H-zP-cDK">
-                                                <rect key="frame" x="0.0" y="0.0" width="199" height="310.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="99H-zP-cDK">
+                                                <rect key="frame" x="0.0" y="10" width="414" height="878.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-kn-tvw">
-                                                        <rect key="frame" x="24" y="0.0" width="151.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-kn-tvw" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="0.0" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="Po8-p6-pdN"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="add Breadcrumb"/>
                                                         <connections>
                                                             <action selector="addBreadcrumb:" destination="VXN-aD-u60" eventType="touchUpInside" id="aCc-ed-Rgp"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-Qd-XJy">
-                                                        <rect key="frame" x="53" y="34.5" width="93" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-Qd-XJy" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="39.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="NyX-rI-8VB"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Message"/>
                                                         <connections>
                                                             <action selector="captureMessage:" destination="VXN-aD-u60" eventType="touchUpInside" id="l7x-e9-yTg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUW-Je-qPg">
-                                                        <rect key="frame" x="14" y="69" width="171" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUW-Je-qPg" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="79" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="M3A-Ss-WyX"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="UIClick Transaction"/>
                                                         <connections>
                                                             <action selector="uiClickTransaction:" destination="VXN-aD-u60" eventType="touchUpInside" id="wyK-N5-EJB"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-Ed-2fv">
-                                                        <rect key="frame" x="30" y="103.5" width="139" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-Ed-2fv" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="118.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="zo5-Mf-R2r"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="User Feedback"/>
                                                         <connections>
                                                             <action selector="captureUserFeedback:" destination="VXN-aD-u60" eventType="touchUpInside" id="sX3-dR-jdD"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-EA-TGq">
-                                                        <rect key="frame" x="69" y="138" width="61.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-EA-TGq" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="158" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="74s-q0-DoK"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Error"/>
                                                         <connections>
                                                             <action selector="captureError:" destination="VXN-aD-u60" eventType="touchUpInside" id="4Bi-kz-z7a"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWT-xp-neO">
-                                                        <rect key="frame" x="39" y="172.5" width="121.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWT-xp-neO" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="197.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="CEe-qk-QNl"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="NSException"/>
                                                         <connections>
                                                             <action selector="captureNSException:" destination="VXN-aD-u60" eventType="touchUpInside" id="yeF-JK-5pu"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2z-DR-kJn">
-                                                        <rect key="frame" x="48.5" y="207" width="102" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2z-DR-kJn" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="237" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="G6A-PA-Zaa"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Fatal Error"/>
                                                         <connections>
                                                             <action selector="captureFatalError:" destination="VXN-aD-u60" eventType="touchUpInside" id="rgn-pX-gj0"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-M5-We0">
-                                                        <rect key="frame" x="65" y="241.5" width="69" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-M5-We0" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="276.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="xEC-LF-d6w"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Crash"/>
                                                         <connections>
                                                             <action selector="crash:" destination="VXN-aD-u60" eventType="touchUpInside" id="vHp-s1-CDF"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BBu-Wu-bJu">
-                                                        <rect key="frame" x="11.5" y="276" width="176" height="34.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN5-hj-Dsu">
+                                                        <rect key="frame" x="82" y="316" width="250" height="128"/>
                                                         <subviews>
                                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9aD-PV-KN2">
-                                                                <rect key="frame" x="0.0" y="7.5" width="20" height="20"/>
+                                                                <rect key="frame" x="-25" y="54" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="X8O-V9-Uvi"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="oxM-tg-9Vc"/>
+                                                                </constraints>
                                                             </activityIndicatorView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mi-y8-sLr">
-                                                                <rect key="frame" x="20" y="0.0" width="156" height="34.5"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mi-y8-sLr" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="250" id="4Fh-lS-NwV"/>
+                                                                </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="GPU frame drops"/>
                                                                 <connections>
@@ -153,94 +187,131 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KlN-al-BhV">
-                                                <rect key="frame" x="199" y="0.0" width="199" height="379.5"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esb-g7-ouy">
-                                                        <rect key="frame" x="34" y="0.0" width="131.5" height="34.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="1mi-y8-sLr" firstAttribute="leading" secondItem="TN5-hj-Dsu" secondAttribute="leading" id="0Me-Q0-4U1"/>
+                                                            <constraint firstItem="1mi-y8-sLr" firstAttribute="top" secondItem="TN5-hj-Dsu" secondAttribute="top" id="2wG-u8-aXD"/>
+                                                            <constraint firstItem="9aD-PV-KN2" firstAttribute="centerY" secondItem="TN5-hj-Dsu" secondAttribute="centerY" id="4sy-hV-a5G"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1mi-y8-sLr" secondAttribute="trailing" id="BYs-jU-Kzm"/>
+                                                            <constraint firstItem="9aD-PV-KN2" firstAttribute="trailing" secondItem="TN5-hj-Dsu" secondAttribute="leading" constant="-5" id="NQs-s8-rSL"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1mi-y8-sLr" secondAttribute="bottom" id="fIb-oV-RlJ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esb-g7-ouy" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="449" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="Twd-8r-ep3"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="HighCPULoad"/>
                                                         <connections>
                                                             <action selector="highCPULoad:" destination="VXN-aD-u60" eventType="touchUpInside" id="LfF-L9-d3V"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQf-cX-VgB">
-                                                        <rect key="frame" x="66" y="34.5" width="67" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQf-cX-VgB" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="488.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="zZJ-xC-ldZ"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Close"/>
                                                         <connections>
                                                             <action selector="close:" destination="VXN-aD-u60" eventType="touchUpInside" id="twr-8m-T6t"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luo-N9-kW2">
-                                                        <rect key="frame" x="43" y="69" width="113" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luo-N9-kW2" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="528" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="gO5-wc-Uxj"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="OOM Crash"/>
                                                         <connections>
                                                             <action selector="oomCrash:" destination="VXN-aD-u60" eventType="touchUpInside" id="KFU-xO-7Fc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c7-yc-5bC">
-                                                        <rect key="frame" x="16" y="103.5" width="167.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c7-yc-5bC" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="567.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="mjd-rZ-kSz"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="ANR Fully Blocking"/>
                                                         <connections>
                                                             <action selector="anrFullyBlocking:" destination="VXN-aD-u60" eventType="touchUpInside" id="3UW-OK-Pdg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-7t-YZK">
-                                                        <rect key="frame" x="8" y="138" width="183" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-7t-YZK" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="607" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="BLh-zS-l8K"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="ANR Filling Run Loop"/>
                                                         <connections>
                                                             <action selector="anrFillingRunLoop:" destination="VXN-aD-u60" eventType="touchUpInside" id="RSx-na-KEx"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvk-5K-mNL">
-                                                        <rect key="frame" x="10.5" y="172.5" width="178.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvk-5K-mNL" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="646.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="orl-fu-pg2"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Capture Transaction"/>
                                                         <connections>
                                                             <action selector="captureTransaction:" destination="VXN-aD-u60" eventType="touchUpInside" id="1D9-vP-slW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-Ym-6qn">
-                                                        <rect key="frame" x="0.0" y="207" width="199" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-Ym-6qn" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="686" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="Sf7-dD-A71"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Force Unwrap Optional"/>
                                                         <connections>
                                                             <action selector="unwrapCrash:" destination="VXN-aD-u60" eventType="touchUpInside" id="1ao-hi-gPI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsC-dC-9hy">
-                                                        <rect key="frame" x="0.5" y="241.5" width="198.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsC-dC-9hy" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="725.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="lXy-6y-PQC"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Decode image on main"/>
                                                         <connections>
                                                             <action selector="imageOnMain:" destination="VXN-aD-u60" eventType="touchUpInside" id="3hA-YV-UdC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrg-wG-isT">
-                                                        <rect key="frame" x="5" y="276" width="189.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrg-wG-isT" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="765" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="pza-SY-XPb"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Regex on main thread"/>
                                                         <connections>
                                                             <action selector="regexOnMainThread:" destination="VXN-aD-u60" eventType="touchUpInside" id="abO-hY-sPP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJc-z6-Cm2">
-                                                        <rect key="frame" x="1.5" y="310.5" width="196" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJc-z6-Cm2" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="804.5" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="HBF-b0-6xq"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Decode JSON on main"/>
                                                         <connections>
                                                             <action selector="jsonMainThread:" destination="VXN-aD-u60" eventType="touchUpInside" id="iM7-uu-pjl"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuh-js-Myu">
-                                                        <rect key="frame" x="29.5" y="345" width="140.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuh-js-Myu" customClass="SentryButton" customModule="EmpowerPlant" customModuleProvider="target">
+                                                        <rect key="frame" x="82" y="844" width="250" height="34.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="5v7-Hl-I1J"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="File I/O on main"/>
                                                         <connections>
@@ -250,43 +321,66 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0Z-7H-qXj">
-                                        <rect key="frame" x="157" y="618" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="23H-sh-JRG"/>
-                                            <constraint firstAttribute="width" secondItem="I0Z-7H-qXj" secondAttribute="height" multiplier="1:1" id="ON2-GZ-qjW"/>
+                                            <constraint firstAttribute="trailing" secondItem="99H-zP-cDK" secondAttribute="trailing" id="1Ol-LF-2or"/>
+                                            <constraint firstItem="99H-zP-cDK" firstAttribute="top" secondItem="5xz-7r-Ymt" secondAttribute="top" constant="10" id="CqU-mb-6L6"/>
+                                            <constraint firstItem="99H-zP-cDK" firstAttribute="leading" secondItem="5xz-7r-Ymt" secondAttribute="leading" id="iR8-0Y-mgf"/>
+                                            <constraint firstAttribute="bottom" secondItem="99H-zP-cDK" secondAttribute="bottom" id="xku-u4-fhg"/>
                                         </constraints>
-                                    </imageView>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="e6B-l5-EBl"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="TFb-cn-Fyy"/>
+                                    </scrollView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="99H-zP-cDK" firstAttribute="width" secondItem="xnN-Pe-VKe" secondAttribute="width" id="HwF-FO-k8d"/>
+                                    <constraint firstItem="5xz-7r-Ymt" firstAttribute="leading" secondItem="xnN-Pe-VKe" secondAttribute="leading" id="MhC-XT-yyK"/>
+                                    <constraint firstItem="5xz-7r-Ymt" firstAttribute="width" secondItem="xnN-Pe-VKe" secondAttribute="width" id="rwq-jI-mcK"/>
+                                    <constraint firstAttribute="trailing" secondItem="5xz-7r-Ymt" secondAttribute="trailing" id="ume-Jc-OvW"/>
+                                </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation_bar" translatesAutoresizingMaskIntoConstraints="NO" id="M6z-Pz-rak">
+                                <rect key="frame" x="0.0" y="37.5" width="414" height="154.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M6z-Pz-rak" secondAttribute="height" multiplier="375:140" id="zDz-eQ-rTz"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUH-aq-ERB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CaI-jg-IPv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qUH-aq-ERB" firstAttribute="top" secondItem="POk-yY-fGn" secondAttribute="top" id="4KD-G5-E3g"/>
+                            <constraint firstItem="M6z-Pz-rak" firstAttribute="leading" secondItem="CaI-jg-IPv" secondAttribute="leading" id="5wY-aE-58n"/>
                             <constraint firstItem="CaI-jg-IPv" firstAttribute="leading" secondItem="xnN-Pe-VKe" secondAttribute="leading" id="9wl-hN-71I"/>
+                            <constraint firstItem="qUH-aq-ERB" firstAttribute="leading" secondItem="CaI-jg-IPv" secondAttribute="leading" id="KHo-ji-oVf"/>
+                            <constraint firstItem="xnN-Pe-VKe" firstAttribute="top" secondItem="M6z-Pz-rak" secondAttribute="bottom" id="KiW-Zl-A5G"/>
                             <constraint firstItem="CaI-jg-IPv" firstAttribute="trailing" secondItem="xnN-Pe-VKe" secondAttribute="trailing" id="MaZ-Wb-7nU"/>
-                            <constraint firstItem="xnN-Pe-VKe" firstAttribute="top" secondItem="CaI-jg-IPv" secondAttribute="top" id="OGI-ac-tOr"/>
+                            <constraint firstItem="M6z-Pz-rak" firstAttribute="bottom" secondItem="CaI-jg-IPv" secondAttribute="top" id="RWv-2T-cLM"/>
                             <constraint firstItem="b5N-Es-1yE" firstAttribute="leading" secondItem="CaI-jg-IPv" secondAttribute="leading" constant="20" id="XDH-Fb-7N5"/>
                             <constraint firstItem="CaI-jg-IPv" firstAttribute="bottom" secondItem="xnN-Pe-VKe" secondAttribute="bottom" id="kh4-CY-icP"/>
                             <constraint firstItem="CaI-jg-IPv" firstAttribute="trailing" secondItem="b5N-Es-1yE" secondAttribute="trailing" constant="20" id="mkA-w9-qys"/>
+                            <constraint firstItem="CaI-jg-IPv" firstAttribute="trailing" secondItem="qUH-aq-ERB" secondAttribute="trailing" id="pds-2e-l7o"/>
+                            <constraint firstItem="qUH-aq-ERB" firstAttribute="bottom" secondItem="M6z-Pz-rak" secondAttribute="top" id="pjZ-yN-iYc"/>
+                            <constraint firstItem="M6z-Pz-rak" firstAttribute="trailing" secondItem="CaI-jg-IPv" secondAttribute="trailing" id="xQU-zL-dU6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r5d-gZ-zyX">
                         <nil key="title"/>
-                        <barButtonItem key="backBarButtonItem" title="Empower Plants" id="Yiv-HT-IE1">
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title="Empower Plants" id="Yiv-HT-IE1">
                             <color key="tintColor" name="AccentColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="9aD-PV-KN2" id="mWb-0J-5Lb"/>
-                        <outlet property="imageView" destination="I0Z-7H-qXj" id="rOX-B5-9Ch"/>
                         <outlet property="progressIndicator" destination="b5N-Es-1yE" id="2AX-n4-293"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgO-GR-jh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="855"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="854.46428571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AUj-2h-S4W">
@@ -294,7 +388,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zLm-2U-p5i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZRT-xt-jev">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="96" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="AccentColor"/>
                         <textAttributes key="largeTitleTextAttributes">
@@ -312,6 +406,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="navigation_bar" width="375" height="140"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -28,6 +28,7 @@
 		D17C73D227D83321006650AF /* ListAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C73D127D83321006650AF /* ListAppViewController.swift */; };
 		D19EBE6F2805ED52007022DC /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19EBE6E2805ED52007022DC /* ShoppingCart.swift */; };
 		D1ERRORTOAST001 /* ErrorToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ERRORTOAST002 /* ErrorToastManager.swift */; };
+		F45D934B2E74C53E002F5805 /* SentryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D934A2E74C53B002F5805 /* SentryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D17C73D127D83321006650AF /* ListAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppViewController.swift; sourceTree = "<group>"; };
 		D19EBE6E2805ED52007022DC /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		D1ERRORTOAST002 /* ErrorToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorToastManager.swift; sourceTree = "<group>"; };
+		F45D934A2E74C53B002F5805 /* SentryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		F4ED5FED2E749717006B47D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F45D934A2E74C53B002F5805 /* SentryButton.swift */,
 				D17C73D127D83321006650AF /* ListAppViewController.swift */,
 				D17C73CB27D82EB8006650AF /* EmpowerPlantViewController.swift */,
 				D19EBE6E2805ED52007022DC /* ShoppingCart.swift */,
@@ -305,7 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./upload-symbols.sh\n";
+			shellScript = "#./upload-symbols.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -334,6 +337,7 @@
 				D17C73B527D8291D006650AF /* SceneDelegate.swift in Sources */,
 				D1ERRORTOAST001 /* ErrorToastManager.swift in Sources */,
 				D15EDF12282BF7FB00FC13D6 /* Product+CoreDataProperties.swift in Sources */,
+				F45D934B2E74C53E002F5805 /* SentryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
